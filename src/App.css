@@ -1,0 +1,82 @@
+.game-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.header {
+  font-size: 40px;
+  display: flex;
+  gap: 90px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 32%;
+}
+
+.countdown,
+.score {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  margin-left: 29%;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  background-color: #ccc;
+  border: 1.5px solid black;
+}
+
+.card img {
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: cover;
+}
+
+.card.flipped img {
+  display: block;
+}
+
+.card:not(.flipped) img {
+  display: none;
+}
+
+.start-again-container {
+  margin-top: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.start-again {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #d74d0d;
+  color: rgb(40, 3, 45);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.start-again:hover {
+  background-color: #3fc246;
+}
+
+.game-over {
+  font-size: 50px;
+  color: rgb(255, 0, 0, 0.5);
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
